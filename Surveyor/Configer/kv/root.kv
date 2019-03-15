@@ -1,0 +1,88 @@
+#:kivy 1.8.0
+
+RootWidget:
+    # import container
+    container: container
+
+    BoxLayout:
+        size:800,600
+        orientation: 'horizontal'
+        padding: 6
+        spacing: 6
+
+        # left:
+        BoxLayout:
+            canvas.before:
+                Color:
+                    rgba:0.6,0.8,0,1
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint:0.3,1
+            orientation: 'vertical'
+            padding:20
+            spacing:66
+            #scene
+            BoxLayout:
+                size_hint:1,0.5
+                orientation: 'vertical'
+                BoxLayout:
+                    orientation:'horizontal'
+                    id:spin1
+                    Label:
+                        size:100,44
+                        text:'Scenes:'
+                Button:
+                    size_hint:0.45,1
+                    text: 'Add'
+                    on_release: app.next_screen('add_scene')
+            #Building
+            BoxLayout:
+                size_hint:1,0.5
+                orientation: 'vertical'
+                BoxLayout:
+                    orientation:'horizontal'
+                    id:spin2
+                    Label:
+                        size:100,44
+                        text:'Buildings:'
+
+                Button:
+                    pos_hint_center:0.5
+                    size_hint:0.45,1
+                    text: 'Add'
+                    on_release: app.next_screen('add_building')
+            #Floor
+            BoxLayout:
+                size_hint:1,0.5
+                orientation: 'vertical'
+                BoxLayout:
+                    id:spin3
+                    orientation:'horizontal'
+                    Label:
+                        size:100,44
+                        text:'Floors:'
+                Button:
+                    pos_hint_center:0.5
+                    size_hint:0.45,1
+                    text: 'Edit'
+                    on_release: app.next_screen('edit_floor')
+            #export
+            BoxLayout:
+                size_hint:1,0.5
+                orientation: 'vertical'
+                BoxLayout:
+                    id:spin4
+                    orientation:'horizontal'
+                    Label:
+                        size:100,44
+                        text:'Format:'
+                Button:
+                    pos_hint_x:0.5
+                    size_hint:0.45,1
+                    text: 'Export'
+                    on_release: app.down_database()
+
+        # (right)
+        BoxLayout:
+            id: container

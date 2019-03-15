@@ -1,0 +1,32 @@
+#:kivy 1.8.0
+#:import datetime datetime
+#:import os os
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation:'vertical'
+        canvas.before:
+            Color:
+                rgba:0.3,0.3,0.3,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+
+        FileChooserListView:
+            id: file_chooser
+            size_hint: None, None
+            size: 400, 380
+            filters: ['*.jpg','*.png','*.jpeg','*.png']
+            path: os.getcwd()
+
+        Button:
+            size_hint:0.2,0.1
+            pos_hint:{'center_x':0.5}
+            text:'Submit'
+            on_press:app.get_path(file_chooser.selection)
+            on_release:app.next_screen('floor_details')
+

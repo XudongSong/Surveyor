@@ -1,0 +1,56 @@
+#:kivy 1.8.0
+#:import datetime datetime
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation:'vertical'
+        canvas.before:
+            Color:
+                rgba:0.3,0.3,0.3,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        padding: 10
+        spacing: 10
+
+        Label:
+            font_size:40
+            size_hint:0.4,0.2
+
+            text: 'Edit floor'
+            pos_hint:{'center_x':0.5}
+
+        BoxLayout:
+            orientation:'vertical'
+            padding: 10
+            spacing: 10
+            size_hint: 0.8, 0.6
+
+            GridLayout:
+                size_hint:1,0.6
+                background_color:0.8,0.8,0.8,1
+                rows:4
+                cols:4
+                id:scenes_list
+                padding:6
+                spacing:6
+
+            BoxLayout:
+                size_hint:1,0.2
+                orientation:'horizontal'
+                padding:22
+                spacing:44
+                Button:
+                    size_hint:0.2,1
+                    text: 'Add'
+                    on_release: app.next_screen('floor_details')
+                Button:
+                    size_hint:0.2,1
+                    text:'Finish'
+                    on_release:app.next_screen('default')
+

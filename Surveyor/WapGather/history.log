@@ -1,0 +1,185 @@
+    1  sudo passed root
+    2  sudo passwd root
+    3  su -
+    4  dh -lh
+    5  df -lh
+    6  su
+    7  sudo adduser kivydev vboxsf
+    8  python
+    9  pip
+   10  sudo apt install python-pip
+   11  pip install git+https://github.com/kivy/kivy.git@master
+   12  pip
+   13  su 
+   14  ls -l
+   15  unzip android-ndk-r13-linux-x86_64.zip 
+   16  unzip platform-tools_r22-linux.zip 
+   17  tar zxvf android-sdk_r24.4.1-linux.tgz 
+   18  ls -l
+   19  cd ..
+   20  ls
+   21  ./android 
+   22  su
+   23  python main.py 
+   24  p4a
+   25  sudo chmod -R 775 /usr/share/kivy-examples/
+   26  cd /usr/share/kivy-examples/
+   27  ls
+   28  ls -l
+   29  p4a apk --requirements=kivy --private /home/kivydev/test/ --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2
+   30  p4a apk --requirements=kivy --private /home/kivydev/test/ --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   31  p4a apk --requirements=kivy,python2 --private /home/kivydev/test/ --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   32  ./android
+   33  p4a apk --requirements=kivy,python2 --private /home/kivydev/test/ --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   34  p4a clean_builds && p4a clean_dists
+   35  p4a apk --requirements=python2,kivy --private /home/kivydev/test --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   36  p4a clean_builds && p4a clean_dists
+   37  p4a apk --requirements=python2,kivy --private /home/kivydev/test --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   38  sudo apt-get install -y build-essential git zlib1g-dev python2.7 python2.7-dev
+   39  p4a apk --requirements=python2,kivy --private /home/kivydev/test --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   40  ls -l
+   41  ls -lh
+   42  p4a clean_builds && p4a clean_dists
+   43  su
+   44  android 
+   45  unzip android-ndk-r10e-linux-x86_64.zip 
+   46  sf -lh
+   47  df -lh
+   48  android 
+   49  p4a apk --requirements=python2,kivy --private /home/kivydev/test --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   50  ls -lh
+   51  p4a clean_builds && p4a clean_dists
+   52  p4a apk --requirements=python2,kivy --private /home/kivydev/test --package=com.myapp.test --name="test" --version=1.0 --bootstrap=sdl2 --arch=armeabi-v7a
+   53  ls -lh
+   54  p4a clean_builds && p4a clean_dists
+   55  p4a apk --list
+   56  p4a apk -- list
+   57  su
+   58  p4a apk -- list
+   59  p4a apk --
+   60  p4a apk -- list
+   61  p4a -- list
+   62  p4a apk --help
+   63  p4a apk -- list
+   64  p4a -- list
+   65  p4a apk -- list
+   66  du
+   67  su
+   68  p4a apk -- list
+   69  ls -lh
+   70  ls -alh
+   71  chmod 775 .p4a 
+   72  ls -alh
+   73  p4a apk -- list
+   74  p4a apk __list
+   75  p4a apk __
+   76  p4a apk
+   77  root
+   78  su
+   79  android
+   80  ./android 
+   81  p4a apk
+   82  p4a clean_builds && p4a clean_dists
+   83  p4a apk
+   84  p4a clean_builds && p4a clean_dists
+   85  p4a apk
+   86  p4a clean_builds && p4a clean_dists
+   87  p4a apk
+   88  sudo pip install git+https://github.com/kivy/python-for-android.git
+   89  p4a apk
+   90  p4a clean_builds && p4a clean_dists
+   91  p4a apk
+   92  python main.py
+   93  p4a apk
+   94  ls -lh
+   95  cd lib-dynload/
+   96  ls -lh
+   97  cd ..
+   98  sudo chmod -R 775 .
+   99  cd lib-dynload/
+  100  ls -lh
+  101  cd ..
+  102  cd test/
+  103  p4a apk
+  104  python
+  105  p4a apk
+  106  p4a clean_builds && p4a clean_dists
+  107  p4a apk
+  108  p4a clean_builds && p4a clean_dists
+  109  p4a apk
+  110  sudo pip install git+https://github.com/kivy/kivy.git@master
+  111  python
+  112  python3
+  113  p4a apk
+  114  python3 main.py
+  115  p4a apk
+  116  ./android 
+  117  tar
+  118  tar --help
+  119  tar -xvJf crystax-ndk-10.3.2-linux-x86_64.tar.xz 
+  120  p4a apk
+  121  p4a apk
+  122  pip3
+  123  python3 main.py
+  124  sudo pip3 install git+https://github.com/kivy/kivy.git@master
+  125  python3 main.py
+  126  python main.py
+  127  python3 main.py
+  128  pip install pygame
+  129  python3 main.py
+  130  sudo pip3 install pygame
+  131  python3 main.py
+  132  pip list
+  133  pip install --upgrade python-for-android
+  134  su
+  135  su -
+  136  cd ~
+  137  apt
+  138  pip install --upgrade kivy
+  139  pip list
+  140  pip install Cython==0.28.2
+  141  pip list
+  142  pip install --upgrade kivy
+  143  ./android
+  144  sudo apt-get update
+  145  sudo dpkg --configure -a
+  146  sudo apt-get update
+  147  sudo dpkg --configure -a
+  148  sudo pip uninstall pythonforandorid
+  149  sudo pip uninstall pythonforandroid
+  150  sudo pip uninstall python-for-android
+  151  pip install git+https://github.com/kivy/python-for-android.git@master
+  152  pip install '/home/kivydev/andr/python-for-android-master.zip' 
+  153  ./android 
+  154  p4a apk
+  155  p4a clean_builds && p4a clean_dists
+  156  p4a apk
+  157  p4a clean_dists
+  158  p4a apk
+  159  cd ..
+  160  cd py3apk/
+  161  p4a apk
+  162  sudo add-apt-repository ppa:jonathonf/python-3.6
+  163  sudo apt-get update
+  164  sudo apt-get install python3.6
+  165  p4a apk
+  166  cd /media/
+  167  ls
+  168  cd ..
+  169  ls
+  170  reboot
+  171  ls
+  172  cd /media/
+  173  ls
+  174  cd sf_Translator/
+  175  ls
+  176  cd step6_sent_fingerprints_to_databases_version2
+  177  ls
+  178  p4a apk
+  179  cd ..
+  180  ls
+  181  cd step4_add_ap_used_to_database_version6
+  182  ls
+  183  p4a apk
+  184  ls
+  185  history > history.log

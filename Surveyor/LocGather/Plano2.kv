@@ -1,0 +1,55 @@
+#:kivy 1.10.1
+
+<config_widget>:
+    id:config
+    size_hint:1,1
+    padding:20
+    spacing:20
+    pos_hint:{'center_x': .5, 'center_y': .5}
+    cols:2
+
+    Label:
+        text:'host'
+    TextInput:
+        id:host_id
+        multiline:False
+        on_text_validate:app.update_host(self.text)
+
+    Label:
+        text:'port'
+    TextInput:
+        id:port_id
+        multiline:False
+        on_text_validate:app.update_port(self.text)
+    Label:
+        text:'connect'
+    Button:
+        id:'connect'
+        text:'connect'
+        on_press:app.connect()
+
+    Label:
+        text:'grid_length/m'
+    TextInput:
+        id:grid_id
+        multiline:False
+        on_text_validate:app.update_grid_length(self.text)
+
+    Label:
+        text:'scene'
+    Spinner:
+        id:scene
+        text: 'None'
+        values: ()
+        on_text:app.update_selected_scene(self.text)
+    Label:
+        text:'submit'
+    Button:
+        id:'survey'
+        text:'survey'
+        on_press:app.start_survey()
+
+
+
+
+

@@ -1,0 +1,74 @@
+#:kivy 1.8.0
+#:import datetime datetime
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation:'vertical'
+        canvas.before:
+            Color:
+                rgba:0.3,0.3,0.3,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        padding: 10
+        spacing: 10
+
+        Label:
+            font_size:40
+            size_hint:0.4,0.1
+            text: 'Floor details'
+            pos_hint:{'center_x':0.5}
+
+        GridLayout:
+            cols:2
+            padding: 10
+            spacing: 10
+            size_hint: 1, 0.8
+
+            Label:
+                text:'map'
+            Button:
+                text:'Select'
+                on_release:app.next_screen('filechoose')
+
+            Label:
+                text:'name'
+            TextInput:
+                id:input_floor_name
+                multiline:False
+
+            Label:
+                text:'map_width_pix'
+            TextInput:
+                id:width_pix
+                multiline:False
+
+            Label:
+                text:'map_heigh_pix'
+            TextInput:
+                id:heigh_pix
+                multiline:False
+
+            Label:
+                text:'map_width_m'
+            TextInput:
+                id:width_m
+                multiline:False
+
+            Label:
+                text:'map_heigh_m'
+            TextInput:
+                id:heigh_m
+                multiline:False
+        Button:
+            size_hint:0.2,0.1
+            pos_hint:{'center_x':0.5,'center_y':0.5}
+            text:'Submit'
+            on_press:app.submit_floor(input_floor_name.text,width_pix.text,heigh_pix.text,width_m.text,heigh_m.text)
+            on_release:app.next_screen('edit_floor')
+

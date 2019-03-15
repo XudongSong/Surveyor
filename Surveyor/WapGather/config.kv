@@ -1,0 +1,60 @@
+#:kivy 1.10.1
+
+GridLayout:
+    id:config
+    size_hint:1,1
+    padding:20
+    spacing:20
+    pos_hint:{'center_x': .5, 'center_y': .5}
+    cols:2
+
+    Label:
+        text:'host'
+    TextInput:
+        id:host_id
+        multiline:False
+        on_text_validate:app.update_host(self.text)
+
+    Label:
+        text:'port'
+    TextInput:
+        id:port_id
+        multiline:False
+        on_text_validate:app.update_port(self.text)
+    Label:
+        text:'connect'
+    Button:
+        id:'connect'
+        text:'connect'
+        on_press:app.connect()
+    Label:
+        text:'scene'
+    Spinner:
+        id:scene
+        text: 'None'
+        values: ()
+        on_text:app.update_selected_scene(self.text)
+
+    Label:
+        text:'threshold'
+    TextInput:
+        id:'threshold'
+        multiline:False
+        on_text_validate:app.update_threshold(self.text)
+
+    Label:
+        text:'appoint_ssid'
+    TextInput:
+        id:'appoint_ssid'
+        multiline:False
+        on_text_validate:app.update_appoint_ssid(self.text)
+
+    Label:
+        text:'scan_interval'
+    TextInput:
+        id:'scan_interval'
+        multiline:False
+        on_text_validate:app.update_scan_interval(self.text)
+
+
+

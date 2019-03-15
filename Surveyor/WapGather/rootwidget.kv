@@ -1,0 +1,29 @@
+#:kivy 1.10.1
+
+
+RootWidget:
+    # import root_root
+    root_root:root_root
+
+    BoxLayout:
+        id:root_root
+        size_hint:1,1
+        orientation: 'vertical'
+
+
+
+<ScrollView>:
+    canvas:
+        Color:
+            rgb: 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<GridLayout>:
+    canvas:
+        Color:
+            rgb: 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size

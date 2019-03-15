@@ -1,0 +1,62 @@
+#:kivy 1.8.0
+#:import datetime datetime
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation:'vertical'
+        canvas.before:
+            Color:
+                rgba:0.3,0.3,0.3,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        padding: 10
+        spacing: 10
+
+        Label:
+            size_hint:0.4,0.1
+            font_size:40
+            text: 'Add building'
+            pos_hint:{'center_x':0.5}
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 10
+            spacing: 10
+            size_hint: 1, 0.9
+
+            GridLayout:
+
+                size_hint:1,0.6
+                background_color:0.8,0.8,0.8,1
+                cols:4
+                id:buildings_list
+                padding:6
+                spacing:6
+            BoxLayout:
+                orientation:'horizontal'
+                size_hint:1,0.1
+                padding_x:99
+                spacing:22
+
+                TextInput:
+                    pos_hint:{'x_right':0.45}
+                    empty_text:'input building name'
+                    id:input_building_name
+                    multiline:False
+
+                Button:
+                    pos_hint:{'x_left':0.55}
+                    text: 'Add'
+                    on_release: app.add_building(input_building_name.text)
+            Button:
+                size_hint:0.2,0.1
+                pos_hint:{'center_x':0.5}
+                text:'Finish'
+                on_release:app.next_screen('default')
+
