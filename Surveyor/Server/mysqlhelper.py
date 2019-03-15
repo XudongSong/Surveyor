@@ -6,7 +6,7 @@ import pymysql
 PY_MYSQL_CONN_DICT = {
     'host': 'localhost',  # This database is in the same server as the web.
     'user': 'root',
-    'password': 'songxudong',
+    'password': '',
     # 'database': 'fringerprints',
     'port': 3306,
     'charset': 'utf8'
